@@ -30,7 +30,7 @@ jobs:
         terraform_version: 1.5.7
     - name: Authenticate with GCP
       run: |
-        echo "${{ secrets.GCP_CREDENTIALS }}" > gcp-credentials.json
+        echo "${{ secrets.GCP_CREDENTIAL }}" > gcp-credentials.json
         gcloud auth activate-service-account --key-file=gcp-credentials.json
     
     - name: Terraform Init
