@@ -5,7 +5,7 @@ resource "google_service_account" "cloudrun-poc-sa" {
   description = "Service account for the Cloud Run PoC"
 }
 
-resource "google_service_account" "bq-sa" {
+resource "google_service_account" "bigquery-sa" {
   account_id = "bq-sa"
   display_name = "BigQuery Service Account"
   project = var.project_id
