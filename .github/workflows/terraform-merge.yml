@@ -51,6 +51,12 @@ jobs:
                   cd terraform
                   terraform plan -out=tfplan -input=false
 
+            - name: Upload tfplan
+              uses: actions/upload-artifact@v4
+              with:
+                name: tfplan
+                path: terraform/tfplan
+                
     manual-approval:
         name: 'Manual Approval'
         runs-on: ubuntu-latest
@@ -80,7 +86,7 @@ jobs:
                   gcloud auth activate-service-account --key-file=gcp-credentials.json
 
             - name: Download tfplan
-              uses: actions/download-artifact@v2
+              uses: actions/download-artifact@v4
               with:
                   name: tfplan
                   path: terraform/
