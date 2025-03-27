@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - 'master'
+    paths:
+        - 'terraform/**'
 
 env:
   TF_VAR_project_id: ${{ secrets.PROJECT_ID }}
