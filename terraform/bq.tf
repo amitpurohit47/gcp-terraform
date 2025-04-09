@@ -8,6 +8,6 @@ resource "google_bigquery_table" "notification_table" {
   dataset_id = google_bigquery_dataset.notification_dataset.dataset_id
   table_id = "notification_table"
   project = var.project_id
-  schema = file("/schemas/notification_table_schema.json")
+  schema = file("./schemas/notification_table_schema.json")
 }
   
