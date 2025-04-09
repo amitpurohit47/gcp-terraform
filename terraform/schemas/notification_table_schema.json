@@ -1,0 +1,17 @@
+[
+    {
+        "name": "publishDate",
+        "type": "STRING",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "address",
+        "type": "STRING",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "status",
+        "type": "STRING",
+        "mode": "REQUIRED"
+    }
+]
